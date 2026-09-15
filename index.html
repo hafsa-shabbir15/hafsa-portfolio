@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hafsa Shabbir, Healthcare Data Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,450;9..144,560;9..144,650&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F4F5F2;
+    --paper:#FFFFFF;
+    --ink:#20262A;
+    --muted:#6C7670;
+    --tan:#D8E3DB;
+    --tan-deep:#5C7A6C;
+    --clay:#88A296;
+    --clay-deep:#33473D;
+    --sand:#E9EDE7;
+    --line:#DFE4DE;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter', -apple-system, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  header{
+    padding:88px 0 56px;
+  }
+
+  .avatar{
+    width:64px;
+    height:64px;
+    border-radius:50%;
+    background:linear-gradient(135deg, var(--clay), var(--tan-deep));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Fraunces', serif;
+    font-size:22px;
+    font-weight:650;
+    color:#FFFFFF;
+    margin-bottom:24px;
+    position:relative;
+    z-index:1;
+  }
+  h1{
+    font-family:'Fraunces', Georgia, serif;
+    font-optical-sizing:auto;
+    font-weight:650;
+    font-size:46px;
+    line-height:1.1;
+    margin:0 0 12px;
+    letter-spacing:-0.01em;
+    position:relative;
+    z-index:1;
+  }
+  .role{
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:17px;
+    letter-spacing:0.01em;
+    color:var(--tan-deep);
+    margin:0 0 18px;
+    position:relative;
+    z-index:1;
+  }
+  .bio{
+    font-size:16px;
+    line-height:1.7;
+    color:var(--muted);
+    max-width:50ch;
+    margin:0 0 26px;
+    position:relative;
+    z-index:1;
+  }
+  .meta-row{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    position:relative;
+    z-index:1;
+  }
+  .pill{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    text-decoration:none;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:14px;
+    color:var(--ink);
+    background:var(--paper);
+    border:1.5px solid var(--line);
+    padding:8px 16px;
+    border-radius:999px;
+    transition:transform 0.15s ease, border-color 0.15s ease;
+  }
+  .pill:hover{
+    transform:translateY(-2px);
+    border-color:var(--clay-deep);
+  }
+
+  .section-label{
+    font-family:'Inter', sans-serif;
+    font-weight:700;
+    font-size:13px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin:56px 0 20px;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    padding-bottom:70px;
+  }
+
+  .project{
+    display:flex;
+    flex-direction:column;
+    text-decoration:none;
+    color:inherit;
+    background:var(--paper);
+    border-radius:22px;
+    padding:24px;
+    border:1.5px solid var(--line);
+    transition:transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  }
+  .project:hover{
+    transform:translateY(-3px);
+    box-shadow:0 14px 28px -14px rgba(32,38,42,0.16);
+    border-color:var(--tan-deep);
+  }
+
+  .icon-badge{
+    width:44px;
+    height:44px;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Inter', sans-serif;
+    font-weight:700;
+    font-size:14px;
+    letter-spacing:0.02em;
+    color:var(--clay-deep);
+    margin-bottom:16px;
+  }
+  .badge-1{ background:var(--sand); }
+  .badge-2{ background:var(--tan); }
+  .badge-3{ background:#DCE6DF; }
+  .badge-4{ background:#CBDACF; }
+
+  .project-title{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:560;
+    font-size:20px;
+    line-height:1.3;
+    margin:0 0 10px;
+  }
+  .project-desc{
+    font-size:14.5px;
+    line-height:1.65;
+    color:var(--muted);
+    margin:0 0 16px;
+    flex-grow:1;
+  }
+  .project-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:auto;
+  }
+  .tags{
+    display:flex;
+    gap:6px;
+    flex-wrap:wrap;
+  }
+  .tag{
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:11.5px;
+    color:var(--ink);
+    background:var(--bg);
+    padding:4px 10px;
+    border-radius:999px;
+  }
+  .go{
+    font-family:'Inter', sans-serif;
+    font-weight:700;
+    font-size:13px;
+    color:var(--clay-deep);
+    white-space:nowrap;
+  }
+
+  footer{
+    padding:0 0 80px;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:13.5px;
+    color:var(--muted);
+    text-align:center;
+  }
+
+  @media (max-width:640px){
+    header{padding:64px 0 40px;}
+    h1{font-size:34px;}
+    .grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="avatar">HS</div>
+    <h1>Hafsa Shabbir</h1>
+    <p class="role">Healthcare Data Analyst</p>
+    <p class="bio">I've always been drawn to population health, the idea that behind every number is a real person. That's carried me from epidemiology coursework into healthcare management, always chasing the same question: how do we build systems that actually care for people.</p>
+      </header>
+
+  <p class="section-label">Selected work</p>
+
+  <div class="grid">
+
+    <a class="project" href="projects/postpartum-mental-health-app.pdf" target="_blank" rel="noopener">
+      <div class="icon-badge badge-1">MH</div>
+      <h2 class="project-title">Innovating postpartum mental health</h2>
+      <p class="project-desc">A business plan for a digital platform supporting socially isolated new mothers, with CBT-informed tools, AI check-ins, and NHS-aligned community care, backed by a full market and financial model.</p>
+      <div class="project-bottom">
+        <div class="tags">
+          <span class="tag">Digital health</span>
+        </div>
+        <span class="go">View →</span>
+      </div>
+    </a>
+
+    <a class="project" href="projects/antimalarial-medicine-quality.pdf" target="_blank" rel="noopener">
+      <div class="icon-badge badge-2">Rx</div>
+      <h2 class="project-title">Falsified antimalarials in Sub-Saharan Africa</h2>
+      <p class="project-desc">A literature review, guided by the WHO Health Systems Framework, on how weak regulation lets substandard antimalarials reach pregnant women and children, with Nigeria and Rwanda compared.</p>
+      <div class="project-bottom">
+        <div class="tags">
+          <span class="tag">Global health</span>
+        </div>
+        <span class="go">View →</span>
+      </div>
+    </a>
+
+    <a class="project" href="projects/maternal-smoking-preterm-delivery.pdf" target="_blank" rel="noopener">
+      <div class="icon-badge badge-3">Epi</div>
+      <h2 class="project-title">Maternal smoking &amp; preterm delivery</h2>
+      <p class="project-desc">A comparison of two studies on parental smoking and birth outcomes, weighing dose-response effects, confounding control, and study design strength across two populations.</p>
+      <div class="project-bottom">
+        <div class="tags">
+          <span class="tag">Epidemiology</span>
+        </div>
+        <span class="go">View →</span>
+      </div>
+    </a>
+
+    <a class="project" href="projects/australia-hta-cost-effectiveness.pdf" target="_blank" rel="noopener">
+      <div class="icon-badge badge-4">HTA</div>
+      <h2 class="project-title">Australia's health technology assessment</h2>
+      <p class="project-desc">How the lack of an explicit cost-effectiveness threshold shapes drug reimbursement decisions in Australia, benchmarked against the UK's NICE model, with the 9vHPV vaccine as a case study.</p>
+      <div class="project-bottom">
+        <div class="tags">
+          <span class="tag">Health economics</span>
+        </div>
+        <span class="go">View →</span>
+      </div>
+    </a>
+
+    <a class="project" href="projects/sids-native-american-maternal-practices.pdf" target="_blank" rel="noopener">
+      <div class="icon-badge badge-1">SID</div>
+      <h2 class="project-title">Maternal practices and SIDS in Native American communities</h2>
+      <p class="project-desc">A research poster, completed with the Southern Plains Tribal Health Board, examining how sleep position, breastfeeding, and maternal smoking contribute to the elevated risk of Sudden Infant Death Syndrome among Native American infants.</p>
+      <div class="project-bottom">
+        <div class="tags">
+          <span class="tag">Maternal & child health</span>
+        </div>
+        <span class="go">View →</span>
+      </div>
+    </a>
+
+    <a class="project" href="projects/urgent-care-patient-flow-simulation.pdf" target="_blank" rel="noopener">
+      <div class="icon-badge badge-2">UCC</div>
+      <h2 class="project-title">Patient flow simulation for an urgent care centre</h2>
+      <p class="project-desc">A queueing theory model built in Python and Excel to test staffing and triage scenarios at a walk-in clinic, finding that adding a triage step balances wait times and clinician workload better than adding staff alone.</p>
+      <div class="project-bottom">
+        <div class="tags">
+          <span class="tag">Healthcare operations</span>
+        </div>
+        <span class="go">View →</span>
+      </div>
+    </a>
+
+    <a class="project" href="projects/south-africa-primary-healthcare-system.pdf" target="_blank" rel="noopener">
+      <div class="icon-badge badge-3">PHC</div>
+      <h2 class="project-title">South Africa's primary health care system</h2>
+      <p class="project-desc">A health systems analysis of South Africa's primary care sector, examining financing gaps, workforce shortages, and public-private disparities, with policy recommendations grounded in the WHO health systems framework.</p>
+      <div class="project-bottom">
+        <div class="tags">
+          <span class="tag">Health systems</span>
+        </div>
+        <span class="go">View →</span>
+      </div>
+    </a>
+
+  </div>
+
+  <footer>Hafsa Shabbir © 2026</footer>
+</div>
+
+</body>
+</html>
